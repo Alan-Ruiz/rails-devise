@@ -17,6 +17,11 @@
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "last_name" }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
@@ -26,5 +31,7 @@
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
+
+
 
 <%= render "devise/shared/links" %>
